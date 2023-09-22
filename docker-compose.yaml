@@ -1,0 +1,10 @@
+version: '3'
+services:
+  logger-server:
+    build:
+      context: ./  # Path to the directory containing your Dockerfile
+    container_name: logger-server
+    restart: always
+    volumes:
+      - ./log:/app/log
+    network_mode: "host"
